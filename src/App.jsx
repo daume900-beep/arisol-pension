@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     document.title = "쌍곡 아리솔펜션 - 아름다운 자연 속 힐링";
-    
+
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowScrollTop(true);
@@ -57,12 +57,12 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section 
-        className="hero" 
-        style={{ backgroundImage: `url('/hero_bg.png')` }}
+      <section
+        className="hero"
+        style={{ backgroundImage: `url('/hero.png')` }}
       >
         <div className="hero-overlay"></div>
-        <motion.div 
+        <motion.div
           className="hero-content"
           initial="hidden"
           animate="visible"
@@ -76,7 +76,7 @@ function App() {
               <Calendar size={20} style={{ marginRight: '8px' }} />
               실시간 예약하기
             </a>
-            <button className="btn-secondary" onClick={() => window.scrollTo({top: document.getElementById('about').offsetTop, behavior: 'smooth'})}>
+            <button className="btn-secondary" onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}>
               자세히 보기
             </button>
           </div>
@@ -85,7 +85,7 @@ function App() {
 
       {/* About Section */}
       <section id="about" className="about container">
-        <motion.div 
+        <motion.div
           className="about-grid"
           initial="hidden"
           whileInView="visible"
@@ -97,19 +97,19 @@ function App() {
           </div>
           <div className="about-text">
             <span className="section-tag">About Us</span>
-            <h3>쌍곡계곡의 맑은 물소리와<br/>함께하는 완벽한 휴식</h3>
+            <h3>쌍곡계곡의 맑은 물소리와<br />함께하는 완벽한 휴식</h3>
             <p className="highlight-text">
               아리솔펜션은 모던하고 깔끔한 외관(블랙&화이트 톤)과 편리한 부대시설을 자랑합니다.
             </p>
             <p>
               펜션 바로 건너편에 맑은 쌍곡계곡이 흐르고 있어 여름철 물놀이와 다슬기 잡기에 최적의 장소입니다.
-              또한 칠보산 등산로 입구에 위치해 산책과 등산을 즐기기에도 좋으며, 
+              또한 칠보산 등산로 입구에 위치해 산책과 등산을 즐기기에도 좋으며,
               밤에는 조용한 자연 속에서 쏟아지는 별을 감상할 수 있습니다.
             </p>
             <ul className="about-features">
-              <li><Star size={16}/> 깔끔하고 모던한 독채형 객실 구조</li>
-              <li><Star size={16}/> 넓은 야외 주차장 완비</li>
-              <li><Star size={16}/> 친절한 서비스와 쾌적한 룸 컨디션</li>
+              <li><Star size={16} /> 깔끔하고 모던한 독채형 객실 구조</li>
+              <li><Star size={16} /> 넓은 야외 주차장 완비</li>
+              <li><Star size={16} /> 친절한 서비스와 쾌적한 룸 컨디션</li>
             </ul>
           </div>
         </motion.div>
@@ -122,7 +122,7 @@ function App() {
           <h2 className="section-title">객실 안내</h2>
           <p className="section-subtitle">아늑하고 편안한 다양한 타입의 객실이 준비되어 있습니다.</p>
 
-          <motion.div 
+          <motion.div
             className="rooms-grid"
             initial="hidden"
             whileInView="visible"
@@ -132,7 +132,7 @@ function App() {
             {/* Room 1 */}
             <motion.div className="room-card" variants={fadeIn}>
               <div className="room-image" style={{ backgroundColor: '#e2e8f0' }}>
-                <div className="room-placeholder"><Bed size={48} color="#94a3b8"/></div>
+                <div className="room-placeholder"><Bed size={48} color="#94a3b8" /></div>
               </div>
               <div className="room-info">
                 <div className="room-header">
@@ -141,17 +141,17 @@ function App() {
                 </div>
                 <p>아늑한 침대와 깨끗한 침구류가 세팅된 객실입니다.</p>
                 <div className="room-meta">
-                  <span><Users size={16}/> 기준 2인 / 최대 4인</span>
-                  <span><Wifi size={16}/> 무료 Wi-Fi</span>
+                  <span><Users size={16} /> 기준 2인 / 최대 4인</span>
+                  <span><Wifi size={16} /> 무료 Wi-Fi</span>
                 </div>
-                <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-room-reserve">객실 예약하기 <ChevronRight size={16}/></a>
+                <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-room-reserve">객실 예약하기 <ChevronRight size={16} /></a>
               </div>
             </motion.div>
 
             {/* Room 2 */}
             <motion.div className="room-card" variants={fadeIn}>
               <div className="room-image" style={{ backgroundColor: '#e2e8f0' }}>
-                <div className="room-placeholder"><Users size={48} color="#94a3b8"/></div>
+                <div className="room-placeholder"><Users size={48} color="#94a3b8" /></div>
               </div>
               <div className="room-info">
                 <div className="room-header">
@@ -160,10 +160,10 @@ function App() {
                 </div>
                 <p>넓은 거실과 방이 분리되어 있어 단체 여행객에게 적합합니다.</p>
                 <div className="room-meta">
-                  <span><Users size={16}/> 기준 4인 / 최대 8인</span>
-                  <span><Wifi size={16}/> 무료 Wi-Fi</span>
+                  <span><Users size={16} /> 기준 4인 / 최대 8인</span>
+                  <span><Wifi size={16} /> 무료 Wi-Fi</span>
                 </div>
-                <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-room-reserve">객실 예약하기 <ChevronRight size={16}/></a>
+                <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-room-reserve">객실 예약하기 <ChevronRight size={16} /></a>
               </div>
             </motion.div>
           </motion.div>
@@ -176,8 +176,8 @@ function App() {
           <span className="section-tag center">Facilities</span>
           <h2 className="section-title">특별한 부대시설</h2>
           <p className="section-subtitle">고객님의 편안한 휴식을 위해 준비했습니다.</p>
-          
-          <motion.div 
+
+          <motion.div
             className="amenities-grid"
             initial="hidden"
             whileInView="visible"
@@ -207,8 +207,8 @@ function App() {
         <div className="container">
           <h2 className="section-title">오시는 길 및 문의</h2>
           <p className="section-subtitle">아리솔펜션으로 오시는 길을 안내해 드립니다.</p>
-          
-          <motion.div 
+
+          <motion.div
             className="contact-grid"
             initial="hidden"
             whileInView="visible"
@@ -224,7 +224,7 @@ function App() {
                   <p className="sub-text">언제든 친절하게 상담해 드립니다.</p>
                 </div>
               </div>
-              
+
               <div className="contact-item">
                 <div className="contact-icon"><MapPin size={24} /></div>
                 <div>
@@ -238,7 +238,7 @@ function App() {
                 네이버 지도로 보기
               </a>
             </div>
-            
+
             <div className="map-placeholder">
               <div className="map-inner">
                 <MapPin size={48} color="#FF7F50" />
@@ -258,7 +258,7 @@ function App() {
         </div>
       </footer>
       {/* Scroll to Top Button */}
-      <motion.button 
+      <motion.button
         className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`}
         onClick={scrollToTop}
         initial={{ opacity: 0, y: 50 }}
