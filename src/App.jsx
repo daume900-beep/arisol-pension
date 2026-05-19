@@ -62,7 +62,7 @@ function App() {
         className="hero"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="hero-overlay"></div>
+
         <motion.div
           className="hero-content"
           initial="hidden"
