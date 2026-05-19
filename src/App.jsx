@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Wifi, Coffee, Tent, Droplets, Bed, Users, Calendar, ChevronRight, Star, ArrowUp } from 'lucide-react';
 import './App.css';
-import heroImage from './assets/hero.png';
+import heroImage from './assets/arisol-main.png';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
