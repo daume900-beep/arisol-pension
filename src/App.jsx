@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Wifi, Coffee, Tent, Droplets, Bed, Users, Calendar, ChevronRight, Star, ArrowUp } from 'lucide-react';
 import './App.css';
+import heroImage from './assets/hero.png';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -59,7 +60,7 @@ function App() {
       {/* Hero Section */}
       <section
         className="hero"
-        style={{ backgroundImage: `url('/hero.png')` }}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="hero-overlay"></div>
         <motion.div
