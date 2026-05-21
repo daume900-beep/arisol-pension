@@ -8,7 +8,7 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
-    document.title = "쌍곡 아리솔펜션 - 아름다운 자연 속 힐링";
+    document.title = "쌍곡아리솔펜션 - 아름다운 자연 속 힐링";
 
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -45,43 +45,116 @@ function App() {
   return (
     <div className="app-container">
       {/* Header / Nav */}
-      <nav className="navbar">
+      <nav className="navbar-new">
         <div className="nav-container">
-          <div className="nav-logo">아리솔펜션</div>
-          <div className="nav-links">
-            <a href="#about">소개</a>
+          <div className="nav-logo-custom">
+            <span className="logo-main">AriSol</span>
+            <span className="logo-sub">PENSION</span>
+          </div>
+          <div className="nav-links-new">
             <a href="#rooms">객실안내</a>
             <a href="#amenities">부대시설</a>
-            <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-nav-reserve">실시간 예약</a>
+            <a href="#contact">주변여행</a>
+            <a href={naverPlaceUrl} target="_blank" rel="noreferrer">실시간 예약</a>
+            <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-nav-reserve-new">예약하기</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
       <section
-        className="hero"
+        className="hero-new"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
+        <div className="hero-overlay-gradient"></div>
+        <div className="hero-content-wrapper">
+          <motion.div
+            className="hero-content-new"
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+          >
+            <p className="hero-tagline">쌍곡계곡 바로 앞,</p>
+            <h1 className="hero-title-new">자연 속에서<br/>온전히 쉬다</h1>
+            <p className="hero-subtitle-new">쌍곡아리솔펜션에서의 하루가<br/>당신의 마음을 쉬게 합니다.</p>
+            
+            <div className="hero-buttons-new">
+              <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-hero-primary">
+                <Calendar size={18} style={{ marginRight: '8px' }} />
+                실시간 예약하기
+              </a>
+              <button className="btn-hero-secondary" onClick={() => window.scrollTo({ top: document.getElementById('rooms').offsetTop, behavior: 'smooth' })}>
+                객실 둘러보기 <ChevronRight size={16} />
+              </button>
+            </div>
+          </motion.div>
+        </div>
 
-        <motion.div
-          className="hero-content"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          <div className="welcome-badge">Welcome To</div>
-          <h1 className="hero-title">아리솔펜션</h1>
-          <p className="hero-subtitle">충북 괴산 쌍곡계곡 바로 앞, 칠보산의 여유가 함께하는 힐링 스팟</p>
-          <div className="hero-buttons">
-            <a href={naverPlaceUrl} target="_blank" rel="noreferrer" className="btn-primary">
-              <Calendar size={20} style={{ marginRight: '8px' }} />
-              실시간 예약하기
-            </a>
-            <button className="btn-secondary" onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}>
-              자세히 보기
-            </button>
+        {/* Hero Cards */}
+        <div className="hero-cards-container">
+          <div className="hero-card" style={{ backgroundImage: 'url(/valley.png)' }}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <h4>탁 트인 자연 전망</h4>
+              <p>산과 계곡이 함께하는 힐링 뷰</p>
+            </div>
           </div>
-        </motion.div>
+          <div className="hero-card" style={{ backgroundImage: 'url(/bbq.png)' }}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <h4>개별 바비큐장</h4>
+              <p>프라이빗한 바비큐를 즐겨보세요</p>
+            </div>
+          </div>
+          <div className="hero-card" style={{ backgroundImage: 'url(/hero_bg.png)' }}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <h4>사계절이 아름다운 곳</h4>
+              <p>봄, 여름, 가을, 겨울 언제나 특별한 풍경</p>
+            </div>
+          </div>
+          <div className="hero-card" style={{ backgroundImage: 'url(/hero_bg.png)' }}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <h4>밤이 더 특별한 아리솔</h4>
+              <p>조명 아래 더욱 로맨틱한 시간</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Icons Section */}
+      <section className="feature-icons-section">
+        <div className="feature-icons-container">
+          <div className="feature-icon-item">
+            <div className="icon-circle"><MapPin size={24}/></div>
+            <div className="icon-text">
+              <h5>쌍곡계곡 인접</h5>
+              <p>도보 1분 거리</p>
+            </div>
+          </div>
+          <div className="feature-icon-item">
+            <div className="icon-circle"><Tent size={24}/></div>
+            <div className="icon-text">
+              <h5>개별 바비큐장</h5>
+              <p>프라이빗 바비큐</p>
+            </div>
+          </div>
+          <div className="feature-icon-item">
+            <div className="icon-circle"><Droplets size={24}/></div>
+            <div className="icon-text">
+              <h5>맑은 계곡 물놀이</h5>
+              <p>튜브, 구명조끼 대여</p>
+            </div>
+          </div>
+          <div className="feature-icon-item">
+            <div className="icon-circle"><Wifi size={24}/></div>
+            <div className="icon-text">
+              <h5>초고속 와이파이</h5>
+              <p>전 객실 무료 Wi-Fi</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -100,10 +173,10 @@ function App() {
             <span className="section-tag">About Us</span>
             <h3>쌍곡계곡의 맑은 물소리와<br />함께하는 완벽한 휴식</h3>
             <p className="highlight-text">
-              아리솔펜션은 모던하고 깔끔한 외관(블랙&화이트 톤)과 편리한 부대시설을 자랑합니다.
+              쌍곡아리솔펜션은 모던하고 깔끔한 외관(블랙&화이트 톤)과 편리한 부대시설을 자랑합니다.
             </p>
             <p>
-              펜션 바로 건너편에 맑은 쌍곡계곡이 흐르고 있어 여름철 물놀이와 다슬기 잡기에 최적의 장소입니다.
+              펜션 바로 건너편에 맑은 쌍곡계곡이 흐르고 있습니다.
               또한 칠보산 등산로 입구에 위치해 산책과 등산을 즐기기에도 좋으며,
               밤에는 조용한 자연 속에서 쏟아지는 별을 감상할 수 있습니다.
             </p>
@@ -207,7 +280,7 @@ function App() {
       <section className="contact">
         <div className="container">
           <h2 className="section-title">오시는 길 및 문의</h2>
-          <p className="section-subtitle">아리솔펜션으로 오시는 길을 안내해 드립니다.</p>
+          <p className="section-subtitle">쌍곡아리솔펜션으로 오시는 길을 안내해 드립니다.</p>
 
           <motion.div
             className="contact-grid"
@@ -243,7 +316,7 @@ function App() {
             <div className="map-placeholder">
               <div className="map-inner">
                 <MapPin size={48} color="#FF7F50" />
-                <p>쌍곡 아리솔펜션</p>
+                <p>쌍곡아리솔펜션</p>
                 <span>칠보산 등산로 입구 / 쌍곡계곡 앞</span>
               </div>
             </div>
@@ -254,7 +327,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} 쌍곡 아리솔펜션. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} 쌍곡아리솔펜션. All rights reserved.</p>
           <p className="footer-sub">충북 괴산군 칠성면 쌍곡로 574-6 | 대표전화: 010-5246-2125</p>
         </div>
       </footer>
