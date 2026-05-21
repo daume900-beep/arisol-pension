@@ -92,28 +92,28 @@ function App() {
 
         {/* Hero Cards */}
         <div className="hero-cards-container">
-          <div className="hero-card" style={{ backgroundImage: 'url(/valley.png)' }}>
+          <div className="hero-card" style={{ backgroundImage: 'url(/card1.jpg)' }}>
             <div className="card-overlay"></div>
             <div className="card-content">
               <h4>탁 트인 자연 전망</h4>
               <p>산과 계곡이 함께하는 힐링 뷰</p>
             </div>
           </div>
-          <div className="hero-card" style={{ backgroundImage: 'url(/bbq.png)' }}>
+          <div className="hero-card" style={{ backgroundImage: 'url(/card2.jpg)' }}>
             <div className="card-overlay"></div>
             <div className="card-content">
               <h4>개별 바비큐장</h4>
               <p>프라이빗한 바비큐를 즐겨보세요</p>
             </div>
           </div>
-          <div className="hero-card" style={{ backgroundImage: 'url(/hero_bg.png)' }}>
+          <div className="hero-card" style={{ backgroundImage: 'url(/card3.jpg)' }}>
             <div className="card-overlay"></div>
             <div className="card-content">
               <h4>사계절이 아름다운 곳</h4>
               <p>봄, 여름, 가을, 겨울 언제나 특별한 풍경</p>
             </div>
           </div>
-          <div className="hero-card" style={{ backgroundImage: 'url(/hero_bg.png)' }}>
+          <div className="hero-card" style={{ backgroundImage: 'url(/card4.jpg)' }}>
             <div className="card-overlay"></div>
             <div className="card-content">
               <h4>밤이 더 특별한 아리솔</h4>
